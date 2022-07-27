@@ -1,0 +1,91 @@
+.extra {
+  margin-top: 100px;
+  margin-bottom: 200px;
+  position: relative;
+  &::after {
+    @include pseudo;
+    width: 440px;
+    height: 434px;
+    position: absolute;
+    right: 0;
+    bottom: -300px;
+    background-image: url("../img/extra/extra-decor.svg");
+    background-size: cover;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__imgbox {
+    margin-top: 45px;
+    padding: 43px 22px 40px 57px;
+    display: flex;
+    align-items: center;
+    width: 552px;
+    min-height: 558px;
+    border-radius: 36px;
+    background: #ffffff;
+    box-shadow: 0px 0px 31px rgba(177, 177, 177, 0.2);
+  }
+  &__img {
+  }
+
+  &__info {
+    max-width: 480px;
+  }
+
+  &__info-title {
+    margin: 0;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: var(--title);
+  }
+
+  &__info-suptitle {
+    margin: 0;
+    margin-bottom: 50px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 119.9%;
+    color: var(--txt);
+  }
+
+  &__info-list {
+  }
+
+  &__info-item {
+    display: flex;
+    align-items: center;
+    @include mb(33px);
+    background-color: var(--light);
+    box-shadow: 0px 4px 28px rgba(27, 17, 8, 0.06);
+    border-radius: 64px 24px 24px 64px;
+  }
+  &__info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 24px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(94.04deg, #30c917 1.24%, #279a13 98.27%);
+    box-shadow: inset 16px 1px 31px 2px rgba(255, 255, 255, 0.4),
+      inset -14px 0px 17px rgba(27, 17, 8, 0.12);
+  }
+
+  &__info-img {
+    width: 56px;
+    height: 56px;
+    fill: var(--light);
+  }
+
+  &__info-text {
+  }
+}
+.container {
+}
+.list-reset {
+}
