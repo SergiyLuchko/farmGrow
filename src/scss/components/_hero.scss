@@ -1,0 +1,111 @@
+.hero {
+  background-image: url("../img/hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 150px;
+  padding-top: 115px;
+  padding-left: 70px;
+  margin-bottom: 50px;
+  &__wrapper {
+    position: relative;
+    &::before {
+      position: absolute;
+      bottom: -125px;
+      left: 0;
+      right: auto;
+      @include pseudo;
+      background-image: url("../img/hero-decor.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 293px;
+      height: 269px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding-bottom: 373px;
+  }
+
+  &__info {
+    max-width: 552px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 119.9%;
+    color: var(--title);
+    span {
+      color: var(--accent);
+    }
+  }
+
+  &__text {
+    max-width: 433px;
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000;
+  }
+
+  &__btn {
+    padding: 16px 9px;
+    font-weight: 600;
+    color: #ef3581;
+    background-color: #fbe4ee;
+    border: 2px solid #ee3581;
+    border-radius: 8px;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #ffb1d3;
+      color: var(--light);
+    }
+  }
+
+  &__imgbox {
+    max-width: 662px;
+  }
+
+  &__imgbox-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 662px;
+    height: 662px;
+    border-radius: 50%;
+    background: rgba(248, 255, 246, 0.12);
+    backdrop-filter: blur(12px);
+  }
+
+  &__video {
+    border-radius: 24px;
+    max-width: 900px;
+    min-height: 581px;
+    background-image: url("../img/video-bg.jpg");
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__video-play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 137px;
+    height: 137px;
+    border-radius: 50%;
+    background: var(--accent-gr);
+  }
+
+  &__video-btn {
+    width: 48px;
+    height: 48px;
+    fill: var(--light);
+  }
+}

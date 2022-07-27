@@ -2,11 +2,15 @@
 // colors
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
+  --font-family: "Montserrat", sans-serif;
+  --content-width: 1128px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
-  --light-color: #fff;
+  --light: #fff;
+  --accent-gr: linear-gradient(94.04deg, #30c917 1.24%, #279a13 98.27%);
+  --accent: #2aa915;
+  --txt: #676767;
+  --title: #062010;
 }

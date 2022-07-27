@@ -16,9 +16,12 @@ html {
 
 .page__body {
   margin: 0;
-  min-width: 320px;
+  min-width: 300px;
   min-height: 100%;
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(-txt);
 }
 
 img {
@@ -42,7 +45,7 @@ a {
 .btn-reset {
   border: none;
   padding: 0;
-  background: transparent;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -83,6 +86,11 @@ a {
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
 }
+.container-fluid {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+}
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
@@ -104,4 +112,27 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+.btn-main {
+  padding: 16px 9px;
+  border-radius: 8px;
+  color: var(--light);
+  background: var(--accent-gr);
+  transition: all 0.3s;
+  border: 2px solid transparent;
+  &:hover {
+    transition: all 0.3s;
+    color: var(--accent);
+    background: linear-gradient(
+      94.04deg,
+      rgba(48, 201, 23, 0.12) 1.24%,
+      rgba(39, 154, 19, 0.12) 98.27%
+    );
+    border: 2px solid var(--accent);
+  }
+  &:disabled {
+    background: rgba(191, 188, 184, 0.44);
+    color: var(--light);
+    border: none;
+  }
 }
