@@ -1,0 +1,59 @@
+.earn {
+  background: linear-gradient(
+    0deg,
+    rgba(42, 169, 21, 0.37) 0%,
+    rgba(42, 169, 21, 0) 100%
+  );
+  text-align: center;
+  padding: 80px 0 100px;
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 119.9%;
+    color: var(--title);
+    span {
+      color: var(--accent);
+    }
+  }
+
+  &__box {
+    padding-right: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 320px;
+    margin: 0 auto;
+    background: linear-gradient(
+      94.35deg,
+      rgba(255, 255, 255, 0.57) 0%,
+      rgba(255, 255, 255, 0.71) 0.01%,
+      rgba(255, 255, 255, 0.06) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 4px 28px rgba(27, 17, 8, 0.06);
+    border-radius: 80px;
+  }
+
+  &__box-image {
+  }
+  &__icon {
+    width: 10px;
+    height: 18px;
+    fill: #fff;
+    margin-left: 6px;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    padding: 13px 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 37px;
+    &:hover > .earn__icon {
+      fill: var(--accent);
+    }
+  }
+}

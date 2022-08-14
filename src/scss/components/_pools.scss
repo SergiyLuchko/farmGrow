@@ -1,0 +1,98 @@
+.pools {
+  margin-bottom: 150px;
+  background-image: url("../img/pools-decor.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  &__title {
+    margin: 0;
+    margin-bottom: 70px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 119.9%;
+    color: var(--title);
+    text-align: center;
+  }
+
+  &__image {
+    border-radius: 40%;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    width: 744px;
+    height: 100px;
+    background: #ffffff;
+    box-shadow: 0px 4px 28px rgba(27, 17, 8, 0.06);
+    border-radius: 64px 24px 24px 64px;
+    margin: 0 auto 40px;
+  }
+
+  &__textbox {
+    max-height: 76px;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 12px;
+    border-right: 2px dashed rgba(42, 169, 21, 0.32);
+  }
+
+  &__textbox-title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--title);
+  }
+
+  &__textbox-text {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 119.9%;
+  }
+
+  &__right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px 0 34px;
+  }
+
+  &__rightbox {
+  }
+
+  &__rightbox-title {
+    margin: 0;
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__rightbox-num {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--accent);
+  }
+
+  &__right-btn {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--accent);
+    padding: 8px 10px;
+    background-color: rgba(42, 169, 21, 0.18);
+    border-radius: 8px;
+    transition: all 0.3s;
+    &:hover {
+      color: var(--light);
+      background: var(--accent-gr);
+    }
+  }
+}

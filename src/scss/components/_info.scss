@@ -1,6 +1,25 @@
 .info {
   margin-bottom: 186px;
+  position: relative;
+  &::before {
+    @include pseudo;
+    background-image: url("../img/info-decor.svg");
+    background-size: cover;
+    background-position: left bottom;
+    position: absolute;
+    bottom: -300px;
+    left: calc(100vw - 100%);
+    width: 430px;
+    height: 434px;
+  }
   &__title {
+    margin: 0;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 119.9%;
+    color: var(--title);
   }
 
   &__list {

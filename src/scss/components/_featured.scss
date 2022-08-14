@@ -1,0 +1,97 @@
+.featured {
+  margin-bottom: 110px;
+  position: relative;
+  &::before {
+    background-image: url("../img/featured-decor.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include pseudo;
+    position: absolute;
+    width: 426px;
+    height: 382px;
+    bottom: -400px;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 80px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 119.9%;
+    color: var(--title);
+    text-align: center;
+  }
+  &__ticker {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    margin-bottom: 100px;
+    &--audited {
+      margin-bottom: 170px;
+    }
+  }
+  &__ticker-wrapper {
+    display: flex;
+    animation: marquee 20s linear infinite;
+    flex-shrink: 0;
+  }
+
+  &__image {
+    width: 356px;
+    padding: 0 20px;
+    &--audited {
+      width: 251px;
+      height: 40px;
+    }
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateZ(0%);
+    }
+    100% {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__card {
+    @include mr(24px);
+    position: relative;
+    padding: 168px 64px 32px 32px;
+    width: 552px;
+    background-color: #bbdbb5;
+    box-shadow: 0px 4px 28px rgba(27, 17, 8, 0.06);
+    border-radius: 24px;
+    background-image: url("../img/featured/card1.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+
+    &:nth-child(2) {
+      background-image: url("../img/featured/card2.svg");
+    }
+  }
+
+  &__card-title {
+    margin: 0;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 119.9%;
+    color: var(--light);
+  }
+
+  &__card-text {
+    margin: 0;
+    margin-bottom: 32px;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+    color: var(--light);
+  }
+
+  &__card-btn {
+    padding: 16px 9px;
+  }
+}
