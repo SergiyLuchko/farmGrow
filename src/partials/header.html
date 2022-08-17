@@ -3,13 +3,16 @@
     <div class="header__inner">
       <img class="logo" src="img/logo.svg" alt="Logo FarmGrow">
       <nav class="nav" title="">
-        <ul class="nav__list list-reset">
-          <li class="nav__item"><a href="#" class="nav__link">Tokenomics</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Statistics</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+        <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+          <span class="burger__line"></span>
+        </button>
+        <ul class="nav__list list-reset" data-menu>
+          <li class="nav__item"><a href="#" class="nav__link" data-menu-item>Tokenomics</a></li>
+          <li class="nav__item"><a href="#" class="nav__link" data-menu-item>Statistics</a></li>
+          <li class="nav__item"><a href="#" class="nav__link" data-menu-item>Blog</a></li>
         </ul>
       </nav>
-      <button class="header__btn btn-reset btn-main">Start Earning</button>
+      <button class="header__btn btn-reset btn-main" data-btn data-menu-item>Start Earning</button>
     </div>
   </div>
 </header>

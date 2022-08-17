@@ -1,5 +1,8 @@
 .farm {
   margin-bottom: 200px;
+  @include mobile {
+    margin-bottom: 100px;
+  }
   &__title {
     margin: 0;
     margin-bottom: 70px;
@@ -8,9 +11,11 @@
     line-height: 119.9%;
     color: var(--title);
     text-align: center;
-  }
-
-  &__content {
+    @include mobile {
+      font-size: 24px;
+      line-height: 119.9%;
+      margin-bottom: 50px;
+    }
   }
 
   &__item {
@@ -21,12 +26,19 @@
     max-height: 100px;
     display: flex;
     align-items: center;
-
     background: #ffffff;
     box-shadow: 0px 4px 28px rgba(27, 17, 8, 0.06);
     border-radius: 64px 24px 24px 64px;
     &:last-child {
       margin: 0 auto 0;
+    }
+    @include tablet {
+      padding: 24px;
+      max-height: 100%;
+      flex-direction: column;
+      margin-bottom: 30px;
+      box-shadow: 0px 4px 20px rgba(27, 17, 8, 0.1);
+      border-radius: 16px;
     }
   }
 
@@ -36,16 +48,31 @@
     display: flex;
     align-items: center;
     border-right: 2px dashed rgba(42, 169, 21, 0.32);
+    @include tablet {
+      width: 100%;
+      border-right: none;
+      justify-content: center;
+      max-height: auto;
+      margin-bottom: 20px;
+    }
+    @include small-mobile {
+      align-items: start;
+    }
   }
 
   &__images {
-    min-width: 100px;
+    max-width: 100px;
     margin-right: 12px;
+    @include small-mobile {
+      max-width: 48px;
+    }
   }
-  &__farm__image {
-  }
+
   &__text {
     padding-right: 12px;
+    @include tablet {
+      padding-right: 0;
+    }
   }
 
   &__item-title {
@@ -55,6 +82,10 @@
     font-size: 20px;
     line-height: 24px;
     color: var(--title);
+    @include small-mobile {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   &__item-text {
@@ -63,6 +94,10 @@
     font-size: 16px;
     line-height: 119.9%;
     color: var(--txt);
+    @include small-mobile {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 
   &__item-right {
@@ -70,10 +105,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include tablet {
+      width: 100%;
+      border-right: none;
+      justify-content: center;
+    }
   }
 
   &__item-info {
     margin-left: 34px;
+    @include tablet {
+      margin-left: 0;
+      margin-right: 130px;
+    }
+    @include small-mobile {
+      margin-right: 30px;
+    }
   }
 
   &__item-descr {
@@ -82,9 +129,13 @@
     font-size: 16px;
     line-height: 20px;
     color: var(--txt);
+    @include small-mobile {
+      margin-bottom: 4px;
+    }
   }
 
   &__item-num {
+    margin: 0;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;

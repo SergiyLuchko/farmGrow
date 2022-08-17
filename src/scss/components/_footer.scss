@@ -3,25 +3,42 @@
   background-color: #262626;
   text-align: center;
   color: var(--light);
+  @include mobile {
+    padding: 42px 0 50px;
+  }
   &__title {
     margin: 0;
     margin-bottom: 60px;
     font-weight: 700;
     font-size: 36px;
     line-height: 44px;
+    @include mobile {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 35px;
+    }
   }
 
   &__copy {
+    margin: 0;
+    @include mobile {
+      font-size: 12px;
+      line-height: 15px;
+    }
   }
 }
 
 .social {
   margin-bottom: 50px;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 168px);
   justify-content: center;
+  gap: 15px;
+  @include small-tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   &__item {
-    @include mr(15px);
     display: inline-flex;
     align-items: center;
     padding: 8px;
@@ -30,13 +47,15 @@
     box-shadow: 0px 4px 28px rgba(27, 17, 8, 0.06);
     border-radius: 38px;
     position: relative;
+
     &::before {
       content: "";
-      display: inline-block;
+      display: inline-flex;
       width: 40px;
       height: 40px;
       border-radius: 50%;
       background-image: url("../img/social/youtube.svg");
+      background-size: cover;
       background-color: #fff;
     }
     &:nth-child(2)::before {
@@ -56,17 +75,10 @@
     line-height: 24px;
     color: #f8f8f8;
     padding-left: 12px;
-  }
-
-  &__link--you {
-  }
-
-  &__link--fb {
-  }
-
-  &__link--tg {
-  }
-
-  &__link--tw {
+    @include mobile {
+      font-size: 16px;
+      line-height: 20px;
+      padding-left: 4px;
+    }
   }
 }

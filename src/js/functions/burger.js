@@ -6,10 +6,12 @@ import { enableScroll } from '../functions/enable-scroll';
   const menu = document?.querySelector('[data-menu]');
   const menuItems = document?.querySelectorAll('[data-menu-item]');
   const overlay = document?.querySelector('[data-menu-overlay]');
+  const btn = document?.querySelector('[data-btn]');
 
   burger?.addEventListener('click', (e) => {
     burger?.classList.toggle('burger--active');
     menu?.classList.toggle('menu--active');
+   btn?.classList.toggle('btn--active');
 
     if (menu?.classList.contains('menu--active')) {
       burger?.setAttribute('aria-expanded', 'true');
@@ -36,6 +38,7 @@ import { enableScroll } from '../functions/enable-scroll';
       burger?.setAttribute('aria-label', 'Открыть меню');
       burger.classList.remove('burger--active');
       menu.classList.remove('menu--active');
+      btn.classList.remove('btn--active');
       enableScroll();
     });
   });

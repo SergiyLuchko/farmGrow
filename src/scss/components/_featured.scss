@@ -1,6 +1,9 @@
 .featured {
   margin-bottom: 110px;
   position: relative;
+  @include mobile {
+    margin-bottom: 40px;
+  }
   &::before {
     background-image: url("../img/featured-decor.svg");
     background-repeat: no-repeat;
@@ -10,6 +13,9 @@
     width: 426px;
     height: 382px;
     bottom: -400px;
+    @include tablet {
+      display: none;
+    }
   }
   &__title {
     margin: 0;
@@ -19,6 +25,11 @@
     line-height: 119.9%;
     color: var(--title);
     text-align: center;
+    @include mobile {
+      font-size: 24px;
+      line-height: 119.9%;
+      margin-bottom: 50px;
+    }
   }
   &__ticker {
     overflow: hidden;
@@ -27,6 +38,9 @@
     margin-bottom: 100px;
     &--audited {
       margin-bottom: 170px;
+    }
+    @include mobile {
+      margin-bottom: 80px;
     }
   }
   &__ticker-wrapper {
@@ -54,6 +68,9 @@
   &__cards {
     display: flex;
     justify-content: space-between;
+    @include desktop {
+      flex-wrap: wrap;
+    }
   }
 
   &__card {
@@ -71,6 +88,15 @@
     &:nth-child(2) {
       background-image: url("../img/featured/card2.svg");
     }
+    @include desktop {
+      @include mr(0);
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      padding: 102px 36px 24px 16px;
+      background-size: 50%;
+    }
   }
 
   &__card-title {
@@ -80,6 +106,11 @@
     font-size: 40px;
     line-height: 119.9%;
     color: var(--light);
+    @include mobile {
+      font-size: 24px;
+      line-height: 119.9%;
+      margin-bottom: 8px;
+    }
   }
 
   &__card-text {
@@ -89,9 +120,17 @@
     line-height: 26px;
     font-weight: 500;
     color: var(--light);
+    @include mobile {
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 24px;
+    }
   }
 
   &__card-btn {
     padding: 16px 9px;
+    @include mobile {
+      padding: 10px 16px;
+    }
   }
 }
